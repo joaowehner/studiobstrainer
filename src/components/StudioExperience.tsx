@@ -46,7 +46,7 @@ export const StudioExperience: React.FC = () => {
 
                 <div className="relative z-10 my-auto text-center py-4 flex flex-col items-center">
                   <img
-                    src="/logo.png"
+                    src={`${import.meta.env.BASE_URL}logo.png`}
                     alt="Logo Studio BS Trainer"
                     className="h-20 w-auto object-contain mb-2 drop-shadow-[0_2px_12px_rgba(0,114,206,0.3)]"
                     loading="lazy"

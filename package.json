@@ -2,6 +2,7 @@
   "name": "studio-bs-trainer",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://joaowehner.github.io/studiobstrainer",
   "type": "module",
   "scripts": {
     "dev": "vite",

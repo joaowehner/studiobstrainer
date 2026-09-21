@@ -121,7 +121,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal }) => {
                   <div className="relative z-10 my-auto text-center py-4 flex flex-col items-center justify-center">
                     <div className="relative p-2 rounded-2xl bg-gradient-to-b from-slate-800/40 to-slate-900/60 border border-slate-700/50 shadow-2xl mb-3">
                       <img
-                        src="/logo.png"
+                        src={`${import.meta.env.BASE_URL}logo.png`}
                         alt="Logo Oficial Studio BS Trainer"
                         className="h-32 sm:h-36 w-auto object-contain drop-shadow-[0_4px_20px_rgba(0,114,206,0.35)]"
                         loading="eager"

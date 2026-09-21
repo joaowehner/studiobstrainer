@@ -20,7 +20,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <div className={className}>
       <img
-        src="/logo.png"
+        src={`${import.meta.env.BASE_URL}logo.png`}
         alt="Logo Oficial BS Trainer Studio"
         className={`shrink-0 drop-shadow-[0_2px_10px_rgba(0,114,206,0.3)] transition-transform duration-200 hover:scale-105 ${imageClassName}`}
         loading="eager"
