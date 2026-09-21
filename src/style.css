@@ -2,14 +2,21 @@
 
 @layer base {
   :root {
-    --bg-main: #0B0D10;
-    --bg-surface: #12151B;
-    --bg-card: #181C24;
-    --border-subtle: #232834;
-    --border-highlight: #343D4E;
-    --brand-gold: #E5A93C;
-    --brand-gold-hover: #F2BA50;
-    --brand-gold-dim: rgba(229, 169, 60, 0.12);
+    /* Authentic Studio BS Trainer Color Tokens */
+    --brand-blue: #0072CE;
+    --brand-blue-hover: #005BAB;
+    --brand-blue-light: #38BDF8;
+    --brand-blue-cyan: #00A8FF;
+    --brand-blue-glow: rgba(0, 114, 206, 0.25);
+    --brand-blue-dim: rgba(0, 114, 206, 0.12);
+    
+    /* Dark Surface System */
+    --bg-main: #07090E;
+    --bg-surface: #0D111A;
+    --bg-card: #131926;
+    --border-subtle: #1E293B;
+    --border-highlight: #2E405E;
+    --border-blue: rgba(56, 189, 248, 0.3);
   }
 
   html {
@@ -29,9 +36,9 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Accessible focus indicators */
+  /* Accessible focus indicators using brand blue light */
   :focus-visible {
-    outline: 2px solid var(--brand-gold);
+    outline: 2px solid var(--brand-blue-light);
     outline-offset: 2px;
   }
 }
@@ -41,14 +48,14 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B0D10;
+  background: #07090E;
 }
 ::-webkit-scrollbar-thumb {
-  background: #232834;
+  background: #1E293B;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #343D4E;
+  background: #2E405E;
 }
 
 /* Reduced motion preference */

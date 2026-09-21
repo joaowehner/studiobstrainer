@@ -73,9 +73,16 @@ Abra o arquivo:
 👉 `src/components/AuthoritySection.tsx`
 - A seção do fundador está configurada em `businessData.founder`. Caso queira adicionar novos profissionais, inclua no array correspondente.
 
-### 4.5 Onde trocar imagens e logos
-- **Favicon:** `public/favicon.svg`
-- **Componentes visuais e cores:** `src/style.css` e nas seções correspondentes em `src/components/`.
+### 4.5 Identidade Visual & Branding Oficial
+- **Logo Oficial:** `public/logo.png` (brasão do Studio com silhueta de casal, tipografia gradiente BS em tons ciano/cobalto, fitas "TRAINER", "PERSONAL" e "SINCE 2017").
+- **Favicon Oficial:** `public/favicon.png` e `public/favicon.svg` (brasão do Studio centrado).
+- **Componente de Marca:** `src/components/BrandLogo.tsx`.
+- **Paleta Oficial (Instagram @studiobstrainer):**
+  - **Azul Cobalto Real:** `#0072CE` / `#0077D4` (cor principal de destaque e CTAs)
+  - **Azul Ciano / Gelo:** `#38BDF8` / `#5CB8FF` (realces, badges, ícones e gradientes)
+  - **Dark Navy / Grafite Profundo:** `#07090E` (fundo principal), `#0D111A` (superfícies), `#131926` (cards)
+  - **Dourado:** Exclusivo para as estrelas de avaliação oficial do Google (`fill-amber-400 text-amber-400`).
+- **Design Tokens:** `src/style.css`.
 
 ### 4.6 Onde configurar Analytics (Google Tag Manager / Meta Pixel)
 Abra o arquivo:

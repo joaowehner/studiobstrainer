@@ -34,12 +34,12 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ onOpenBook
   ];
 
   return (
-    <section id="como-funciona" className="py-12 sm:py-20 lg:py-24 bg-[#0B0D10] border-b border-slate-800/80 relative">
+    <section id="como-funciona" className="py-12 sm:py-20 lg:py-24 bg-[#07090E] border-b border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-4">
             <span>PASSO A PASSO TRANSPARENTE</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-['Outfit']">
@@ -57,15 +57,15 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ onOpenBook
             return (
               <div
                 key={idx}
-                className="relative p-5 sm:p-7 rounded-2xl bg-gradient-to-b from-[#131720] to-[#0E1117] border border-slate-800 flex flex-col justify-between group hover:border-slate-700 transition-all"
+                className="relative p-5 sm:p-7 rounded-2xl bg-gradient-to-b from-[#0F141F] to-[#0A0D15] border border-slate-800 flex flex-col justify-between group hover:border-slate-700 transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-3xl font-extrabold text-slate-700 group-hover:text-amber-400/40 transition-colors">
+                    <span className="font-mono text-3xl font-extrabold text-slate-700 group-hover:text-sky-400/50 transition-colors">
                       {step.number}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-amber-400" />
+                    <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-sky-400" />
                     </div>
                   </div>
 
@@ -96,7 +96,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ onOpenBook
           </p>
           <button
             onClick={onOpenBookingModal}
-            className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 rounded-xl shadow-lg shadow-amber-500/20 active:scale-[0.98] transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 rounded-xl shadow-lg shadow-blue-500/20 active:scale-[0.98] transition-all cursor-pointer"
           >
             <span>Agendar aula experimental</span>
             <ArrowRight className="w-4 h-4" />

@@ -42,15 +42,15 @@ export const DifferenceSection: React.FC = () => {
   ];
 
   return (
-    <section id="diferenciais" className="py-12 sm:py-20 lg:py-24 bg-[#0E1218] border-b border-slate-800/80 relative overflow-hidden">
-      {/* Background soft gradient */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-amber-500/5 blur-[120px] pointer-events-none rounded-full" />
+    <section id="diferenciais" className="py-12 sm:py-20 lg:py-24 bg-[#0A0D15] border-b border-slate-800/80 relative overflow-hidden">
+      {/* Background soft gradient in brand blue */}
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-600/5 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-4">
             <span>DIFERENCIAIS DO BS TRAINER</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-['Outfit']">
@@ -68,19 +68,19 @@ export const DifferenceSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="p-5 sm:p-7 rounded-2xl bg-[#131720] border border-slate-800/90 hover:border-amber-500/40 hover:bg-[#161B26] transition-all flex flex-col justify-between group"
+                className="p-5 sm:p-7 rounded-2xl bg-[#0F141F] border border-slate-800/90 hover:border-sky-500/40 hover:bg-[#121826] transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center group-hover:bg-amber-400/20 transition-colors">
-                      <Icon className="w-6 h-6 text-amber-400" />
+                    <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center group-hover:bg-sky-500/20 transition-colors">
+                      <Icon className="w-6 h-6 text-sky-400" />
                     </div>
-                    <span className="text-[10px] font-bold tracking-wider uppercase text-slate-400 bg-slate-800/70 px-2.5 py-1 rounded-md border border-slate-700/60">
+                    <span className="text-[10px] font-bold tracking-wider uppercase text-slate-300 bg-slate-800/80 px-2.5 py-1 rounded-md border border-slate-700/60">
                       {item.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white font-['Outfit'] mb-3 group-hover:text-amber-300 transition-colors">
+                  <h3 className="text-lg font-bold text-white font-['Outfit'] mb-3 group-hover:text-sky-300 transition-colors">
                     {item.title}
                   </h3>
                   
@@ -89,8 +89,8 @@ export const DifferenceSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center gap-2 text-xs font-semibold text-amber-400/80 group-hover:text-amber-400 transition-colors">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center gap-2 text-xs font-semibold text-sky-400/80 group-hover:text-sky-400 transition-colors">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
                   <span>Padrão Studio BS Trainer</span>
                 </div>
               </div>

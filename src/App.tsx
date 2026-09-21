@@ -28,7 +28,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0B0D10] text-slate-100 selection:bg-amber-500/20 selection:text-amber-300">
+    <div className="flex flex-col min-h-screen bg-[#07090E] text-slate-100 selection:bg-[#0072CE]/30 selection:text-[#38BDF8]">
       
       {/* Top Main Navigation Header */}
       <Header onOpenBookingModal={handleOpenBookingModal} />

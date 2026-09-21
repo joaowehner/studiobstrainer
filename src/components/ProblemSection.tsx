@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertCircle, HelpCircle, Users, Frown, Check, ArrowRight } from 'lucide-react';
+import { AlertCircle, HelpCircle, Users, Frown, ArrowRight } from 'lucide-react';
 
 interface ProblemSectionProps {
   onOpenBookingModal: () => void;
@@ -30,12 +30,12 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenBookingMod
   ];
 
   return (
-    <section id="studio" className="py-12 sm:py-20 lg:py-24 bg-[#0B0D10] border-b border-slate-800/80 relative">
+    <section id="studio" className="py-12 sm:py-20 lg:py-24 bg-[#07090E] border-b border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-4">
             <span>EXPERIÊNCIA REAL DE TREINO</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-['Outfit']">
@@ -53,7 +53,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenBookingMod
             return (
               <div
                 key={idx}
-                className="p-5 sm:p-7 rounded-2xl bg-gradient-to-br from-[#12161E] to-[#0E1117] border border-slate-800 hover:border-slate-700/80 transition-all group"
+                className="p-5 sm:p-7 rounded-2xl bg-gradient-to-br from-[#0F141E] to-[#0A0D15] border border-slate-800 hover:border-slate-700/80 transition-all group"
               >
                 <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-5 group-hover:bg-red-500/15 transition-colors">
                   <Icon className="w-6 h-6 text-red-400" />
@@ -70,10 +70,10 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenBookingMod
         </div>
 
         {/* The BS Solution Bridge Box */}
-        <div className="rounded-2xl bg-gradient-to-r from-amber-500/10 via-slate-900 to-amber-500/10 border border-amber-500/30 p-6 sm:p-8 relative overflow-hidden">
+        <div className="rounded-2xl bg-gradient-to-r from-blue-600/10 via-slate-900 to-blue-600/10 border border-blue-500/30 p-6 sm:p-8 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:col-span-8">
-              <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-400">
                 A proposta do BS Trainer Studio
               </span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-white font-['Outfit'] mt-1 mb-3">
@@ -86,7 +86,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenBookingMod
             <div className="lg:col-span-4 flex lg:justify-end">
               <button
                 onClick={onOpenBookingModal}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-xl shadow-md shadow-amber-500/20 active:scale-[0.98] transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 rounded-xl shadow-md shadow-blue-500/20 active:scale-[0.98] transition-all cursor-pointer"
               >
                 <span>Conhecer o Studio</span>
                 <ArrowRight className="w-4 h-4" />

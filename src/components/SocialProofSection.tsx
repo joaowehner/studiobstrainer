@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, MessageSquare, ExternalLink, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { Star, ExternalLink, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { businessData } from '../data/business';
 
 export const SocialProofSection: React.FC = () => {
@@ -23,12 +23,12 @@ export const SocialProofSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-20 lg:py-24 bg-[#0B0D10] border-b border-slate-800/80 relative">
+    <section className="py-12 sm:py-20 lg:py-24 bg-[#07090E] border-b border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-4">
             <span>REPUTAÇÃO PÚBLICA CONSOLIDADA</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-['Outfit']">
@@ -40,13 +40,13 @@ export const SocialProofSection: React.FC = () => {
         </div>
 
         {/* Central Google Rating Card */}
-        <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#141923] to-[#0E1117] border border-slate-800 p-5 sm:p-8 lg:p-10 mb-10 shadow-2xl relative overflow-hidden">
+        <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-[#101624] to-[#0A0D15] border border-slate-800 p-5 sm:p-8 lg:p-10 mb-10 shadow-2xl relative overflow-hidden">
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
             {/* Rating Metric Block */}
             <div className="md:col-span-5 text-center md:text-left border-b md:border-b-0 md:border-r border-slate-800 pb-8 md:pb-0 md:pr-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-400/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-sky-500/10 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
                 Google Avaliações
               </div>
               
@@ -75,7 +75,7 @@ export const SocialProofSection: React.FC = () => {
                   href={businessData.location.mapsSearchUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-sky-400 hover:text-sky-300 transition-colors"
                 >
                   <span>Conferir no Google Maps</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -92,9 +92,9 @@ export const SocialProofSection: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {reputationThemes.map((theme, idx) => (
-                  <div key={idx} className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
-                    <div className="text-xs font-bold text-amber-300 mb-1 flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <div key={idx} className="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/80">
+                    <div className="text-xs font-bold text-sky-300 mb-1 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-sky-400 shrink-0" />
                       <span>{theme.title}</span>
                     </div>
                     <p className="text-[12px] text-slate-400 leading-snug">

@@ -1,17 +1,17 @@
 import React from 'react';
-import { Award, ShieldCheck, Calendar, Building, Sparkles } from 'lucide-react';
+import { Award, ShieldCheck, Calendar, Building } from 'lucide-react';
 import { businessData } from '../data/business';
 
 export const AuthoritySection: React.FC = () => {
   return (
-    <section id="historia" className="py-12 sm:py-20 lg:py-24 bg-[#0E1218] border-b border-slate-800/80 relative">
+    <section id="historia" className="py-12 sm:py-20 lg:py-24 bg-[#0A0E17] border-b border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Text Narrative */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-semibold mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-4">
               <span>NOSSA HISTÓRIA & PROPÓSITO</span>
             </div>
 
@@ -34,7 +34,7 @@ export const AuthoritySection: React.FC = () => {
             {/* Authority Key Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-slate-800">
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-['Outfit']">
+                <div className="text-2xl sm:text-3xl font-extrabold text-sky-400 font-['Outfit']">
                   2017
                 </div>
                 <div className="text-xs text-slate-400 mt-0.5">
@@ -42,7 +42,7 @@ export const AuthoritySection: React.FC = () => {
                 </div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-['Outfit']">
+                <div className="text-2xl sm:text-3xl font-extrabold text-sky-400 font-['Outfit']">
                   +16 Anos
                 </div>
                 <div className="text-xs text-slate-400 mt-0.5">
@@ -50,7 +50,7 @@ export const AuthoritySection: React.FC = () => {
                 </div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-['Outfit']">
+                <div className="text-2xl sm:text-3xl font-extrabold text-sky-400 font-['Outfit']">
                   4,6 ★
                 </div>
                 <div className="text-xs text-slate-400 mt-0.5">
@@ -63,29 +63,29 @@ export const AuthoritySection: React.FC = () => {
 
           {/* Right Authority Card */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-gradient-to-b from-[#151A24] to-[#0E1117] border border-slate-800 p-6 sm:p-8 relative shadow-xl">
+            <div className="rounded-2xl bg-gradient-to-b from-[#111726] to-[#0A0D15] border border-slate-800 p-6 sm:p-8 relative shadow-xl">
               
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center shrink-0">
-                  <Award className="w-7 h-7 text-amber-400" />
+                <div className="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center shrink-0">
+                  <Award className="w-7 h-7 text-sky-400" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white font-['Outfit']">
                     {businessData.founder.name}
                   </h3>
-                  <p className="text-xs text-amber-400 font-medium">
+                  <p className="text-xs text-sky-400 font-medium">
                     {businessData.founder.role}
                   </p>
                 </div>
               </div>
 
-              <blockquote className="text-sm text-slate-300 italic border-l-2 border-amber-400/60 pl-4 py-1 mb-6 leading-relaxed">
+              <blockquote className="text-sm text-slate-300 italic border-l-2 border-sky-400/60 pl-4 py-1 mb-6 leading-relaxed">
                 "{businessData.founder.bioShort}"
               </blockquote>
 
               <div className="space-y-3 pt-4 border-t border-slate-800/80 text-xs text-slate-400">
                 <div className="flex items-center gap-2.5">
-                  <Building className="w-4 h-4 text-amber-400 shrink-0" />
+                  <Building className="w-4 h-4 text-sky-400 shrink-0" />
                   <span>{businessData.legalName}</span>
                 </div>
                 <div className="flex items-center gap-2.5">
@@ -93,7 +93,7 @@ export const AuthoritySection: React.FC = () => {
                   <span>CNPJ: {businessData.cnpj} • Situação Ativa</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Calendar className="w-4 h-4 text-amber-400 shrink-0" />
+                  <Calendar className="w-4 h-4 text-sky-400 shrink-0" />
                   <span>Atuação ininterrupta em Campo Grande — MS</span>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export const AuthoritySection: React.FC = () => {
                   href={businessData.social.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors"
+                  className="text-xs font-bold text-sky-400 hover:text-sky-300 transition-colors"
                 >
                   {businessData.social.instagramHandle} →
                 </a>

@@ -10,7 +10,7 @@ export const MobileStickyCTA: React.FC<MobileStickyCTAProps> = ({ onOpenBookingM
   return (
     <aside 
       aria-label="Ações rápidas de contato"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-[#0B0D10]/95 backdrop-blur-lg border-t border-slate-800/90 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-2xl shadow-black"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-[#07090E]/95 backdrop-blur-lg border-t border-slate-800/90 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-2xl shadow-black"
     >
       <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto">
         
@@ -28,7 +28,7 @@ export const MobileStickyCTA: React.FC<MobileStickyCTAProps> = ({ onOpenBookingM
         {/* Modal Booking */}
         <button
           onClick={onOpenBookingModal}
-          className="flex items-center justify-center gap-2 py-3 px-3 text-xs font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 rounded-xl shadow-md shadow-amber-500/20 active:scale-[0.98] transition-all text-center cursor-pointer"
+          className="flex items-center justify-center gap-2 py-3 px-3 text-xs font-bold text-white bg-gradient-to-r from-[#0072CE] to-[#005bb5] rounded-xl shadow-md shadow-[#0072CE]/30 border border-[#38BDF8]/20 active:scale-[0.98] transition-all text-center cursor-pointer"
         >
           <Calendar className="w-4 h-4 shrink-0" />
           <span>Aula Experimental</span>

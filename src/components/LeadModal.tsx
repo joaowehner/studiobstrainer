@@ -54,7 +54,7 @@ export const LeadModal: React.FC<LeadModalProps> = ({ isOpen, onClose }) => {
 
         {/* Modal Header */}
         <div className="mb-6">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-semibold mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0072CE]/15 border border-[#0072CE]/30 text-[#38BDF8] text-xs font-semibold mb-2">
             <span>AULA EXPERIMENTAL</span>
           </div>
           <h2 id="modal-title" className="text-xl sm:text-2xl font-extrabold text-white font-['Outfit']">
@@ -71,7 +71,7 @@ export const LeadModal: React.FC<LeadModalProps> = ({ isOpen, onClose }) => {
           {/* Name Field */}
           <div>
             <label htmlFor="lead-name" className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-1.5">
-              <User className="w-3.5 h-3.5 text-amber-400" />
+              <User className="w-3.5 h-3.5 text-[#38BDF8]" />
               <span>Seu Nome</span>
             </label>
             <input
@@ -81,14 +81,14 @@ export const LeadModal: React.FC<LeadModalProps> = ({ isOpen, onClose }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Ex: Ana Silva"
-              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#38BDF8] transition-colors"
             />
           </div>
 
           {/* WhatsApp Field */}
           <div>
             <label htmlFor="lead-phone" className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-1.5">
-              <Phone className="w-3.5 h-3.5 text-amber-400" />
+              <Phone className="w-3.5 h-3.5 text-[#38BDF8]" />
               <span>Seu WhatsApp com DDD</span>
             </label>
             <input
@@ -98,21 +98,21 @@ export const LeadModal: React.FC<LeadModalProps> = ({ isOpen, onClose }) => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Ex: (67) 99999-9999"
-              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[#38BDF8] transition-colors"
             />
           </div>
 
           {/* Preferred Shift */}
           <div>
             <label htmlFor="lead-shift" className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-amber-400" />
+              <Clock className="w-3.5 h-3.5 text-[#38BDF8]" />
               <span>Melhor Turno para Treinar</span>
             </label>
             <select
               id="lead-shift"
               value={preferredShift}
               onChange={(e) => setPreferredShift(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#38BDF8] transition-colors"
             >
               <option value="Manhã (05h às 11h)">Manhã (05h às 11h)</option>
               <option value="Almoço / Tarde (11h às 16h)">Almoço / Início da Tarde (11h às 16h)</option>
@@ -123,14 +123,14 @@ export const LeadModal: React.FC<LeadModalProps> = ({ isOpen, onClose }) => {
           {/* Main Goal */}
           <div>
             <label htmlFor="lead-goal" className="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-1.5">
-              <Target className="w-3.5 h-3.5 text-amber-400" />
+              <Target className="w-3.5 h-3.5 text-[#38BDF8]" />
               <span>Objetivo Principal</span>
             </label>
             <select
               id="lead-goal"
               value={goal}
               onChange={(e) => setGoal(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-[#38BDF8] transition-colors"
             >
               <option value="Saúde & Condicionamento">Saúde & Condicionamento Físico</option>
               <option value="Constância & Criação de Hábito">Criar constância e sair do sedentarismo</option>
@@ -144,7 +144,7 @@ export const LeadModal: React.FC<LeadModalProps> = ({ isOpen, onClose }) => {
           <div className="pt-3">
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-6 text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 rounded-xl shadow-lg shadow-amber-500/25 active:scale-[0.98] transition-all cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-6 text-sm font-bold text-white bg-gradient-to-r from-[#0072CE] to-[#005bb5] hover:from-[#0077D4] hover:to-[#0062c4] rounded-xl shadow-lg shadow-[#0072CE]/30 border border-[#38BDF8]/20 active:scale-[0.98] transition-all cursor-pointer"
             >
               <Send className="w-4 h-4" />
               <span>Enviar e Abrir no WhatsApp</span>
