@@ -2,6 +2,8 @@
 
 Landing page oficial de alta conversão do **BS Trainer Studio** (Campo Grande — MS), desenvolvida sob medida para posicionamento premium, agendamento de aula experimental e conversão via WhatsApp.
 
+🌐 **Site Publicado (GitHub Pages):** [https://joaowehner.github.io/studiobstrainer](https://joaowehner.github.io/studiobstrainer)
+
 ---
 
 ## 📌 1. Informações Centrais da Empresa
