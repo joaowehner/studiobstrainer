@@ -4,10 +4,16 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/studiobstrainer/',
+  base: '/',
   plugins: [react(), tailwindcss()],
+  optimizeDeps: {
+    entries: ['index.html']
+  },
   server: {
     port: 5173,
-    host: true
+    host: true,
+    watch: {
+      ignored: ['**/scratch/**', '**/dist/**', '**/dist-*/**', '**/bs-trainer-assets/**', '**/.git/**', '**/docs/**', '**/*.zip']
+    }
   }
 });

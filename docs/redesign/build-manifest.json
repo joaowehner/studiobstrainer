@@ -1,0 +1,98 @@
+{
+  "favicon.svg": {
+    "bytes": 12871,
+    "sha256": "9092eaff42f23dfb5afd64320a1e6790a783e909a7925d0c96833f0e5a854aea"
+  },
+  "icons.svg": {
+    "bytes": 5031,
+    "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a"
+  },
+  "robots.txt": {
+    "bytes": 94,
+    "sha256": "c1ab641ff2c79fd5942936bad3e65b040fd39976e474d7bef191298dd8a58435"
+  },
+  "sitemap.xml": {
+    "bytes": 297,
+    "sha256": "6f2ea34072c9600bd23e9fadc91e3502731d4027b4c59c29708a0b6e52d15acc"
+  },
+  "index.html": {
+    "bytes": 5668,
+    "sha256": "b542944c0f96e4c8a2116a4eb5b54a4873791e2cc3fbd08e6b4d101483dea4c3"
+  },
+  "logo.png": {
+    "bytes": 180844,
+    "sha256": "54861aa704410393c6d8313c10dd4ba46a24b8319dc03aaf9f0e4d23160313d9"
+  },
+  "favicon.png": {
+    "bytes": 4732,
+    "sha256": "7df77c53446171a4a7356668b01147cef433ab14c41faae28c5081a05690223e"
+  },
+  "favicon.ico": {
+    "bytes": 4732,
+    "sha256": "7df77c53446171a4a7356668b01147cef433ab14c41faae28c5081a05690223e"
+  },
+  "404.html": {
+    "bytes": 723,
+    "sha256": "3919f49091a5232f2e768ab161500e10033ea55e5d3194c1385ac94643107792"
+  },
+  "images/acompanhamento.jpg": {
+    "bytes": 33915,
+    "sha256": "768bee9381275ac0092b87228705568e2b4a0131ff896057042176cd4d1e44b4"
+  },
+  "images/entrada.jpg": {
+    "bytes": 296954,
+    "sha256": "9ac196bad856926564e0e6f286c534b688f697a5e8f02c7046e5c984e8b00261"
+  },
+  "images/treino.jpg": {
+    "bytes": 34767,
+    "sha256": "8ba7d9dc074e292e5d54bdc26919569a6cb651f3aae377d880cc3569d942525d"
+  },
+  "images/logo-display.webp": {
+    "bytes": 13570,
+    "sha256": "8b48f7915d475bf6c6673bc14746919edaf613aa4fad424e9c799238ec58bc81"
+  },
+  "images/entrada.webp": {
+    "bytes": 144642,
+    "sha256": "3e11cde909306f37387642ea6dfffb137bee8ea90ec4a6c5c51c063f02618287"
+  },
+  "fonts/barlow-condensed-700.ttf": {
+    "bytes": 87120,
+    "sha256": "7dde307fa887fc65ff5830cfada77a7decc5dae8d3c816c9d39ba3f1af1c4ed7"
+  },
+  "fonts/jakarta-400.ttf": {
+    "bytes": 63336,
+    "sha256": "076831b98043f50f829b6c91db3be4a844641f1c95bccff5c886ed87c661a852"
+  },
+  "fonts/jakarta-600.ttf": {
+    "bytes": 63412,
+    "sha256": "50357df108c5d297ec4ece76aeddf49561f3794f67af077cfc2c711b7a75b439"
+  },
+  "fonts/Barlow-OFL.txt": {
+    "bytes": 4377,
+    "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+  },
+  "fonts/Jakarta-OFL.txt": {
+    "bytes": 4402,
+    "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99"
+  },
+  "fonts/barlow-condensed-700.woff2": {
+    "bytes": 33052,
+    "sha256": "4d379dfc68d25a046fe388aefb92f0377abfa1585a15973b2bb591bafe1b1001"
+  },
+  "fonts/jakarta-400.woff2": {
+    "bytes": 22140,
+    "sha256": "ecd6a5d56cf6f1e3e220624b5ca4e7b9aad9f7bbf7d65ca8abfb323fc512909f"
+  },
+  "fonts/jakarta-600.woff2": {
+    "bytes": 22840,
+    "sha256": "406aa5f78c5448ede60ed2bc1f2043c8e02fcdfb1c8d00f929d85db8b86688e8"
+  },
+  "assets/index-Cu7MOP00.js": {
+    "bytes": 248868,
+    "sha256": "6c3cb2328450550e7df87bf8476bb3ec5cc5fd1594fa13bac6828ba830976a58"
+  },
+  "assets/index-DeYWmx-j.css": {
+    "bytes": 23121,
+    "sha256": "e3ef4c592c6571fa054be213bd191b27ba716995df1cd0bfcff8b5df08c28618"
+  }
+}

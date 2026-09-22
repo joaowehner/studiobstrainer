@@ -1,0 +1,48 @@
+{
+  "lighthouse": {
+    "mobile": {
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "LCPms": 2382,
+      "CLS": 7.229281400541794e-05,
+      "TBTms": 14,
+      "accessibleNameMatches": true
+    },
+    "desktop": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "LCPms": 558,
+      "CLS": 3.703236123385094e-05,
+      "TBTms": 0,
+      "accessibleNameMatches": true
+    }
+  },
+  "browser": {
+    "horizontalOverflow": false,
+    "duplicateIds": 0,
+    "brokenAnchors": 0,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "formRequiredFields": true,
+    "nameWhitespaceRejected": true,
+    "invalidPhoneRejected": true,
+    "whatsappDraftGenerated": true,
+    "whatsappMessageSent": false,
+    "dialogFocusLoop": true,
+    "escapeAndFocusReturn": true,
+    "menuBookingTransition": true,
+    "menuClosesOnDesktop": true,
+    "faqKeyboardAndExclusive": true,
+    "mapRendered": true,
+    "skipLinkFocus": true
+  },
+  "reducedMotion": "CSS compilado revisado: transições 0s, animation none, transform none; sem animações automáticas de página."
+}

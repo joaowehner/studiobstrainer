@@ -1,0 +1,239 @@
+/* BS Trainer: linha, velocidade, precisão. No ambient animation loops. */
+:root {
+  --motion-fast: 160ms;
+  --motion-base: 260ms;
+  --motion-slow: 520ms;
+  --motion-intro: 980ms;
+  --motion-beat: 60ms;
+  --motion-ease: cubic-bezier(0.2, 0, 0, 1);
+  --motion-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-exit: cubic-bezier(0.3, 0, 1, 1);
+  --entry-delay: 0ms;
+}
+
+.brand-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  display: grid;
+  place-items: center;
+  background: var(--bg-main);
+  pointer-events: none;
+  animation: intro-exit var(--motion-intro) var(--motion-reveal) both;
+}
+.intro-mark { width: 76px; }
+.intro-mark img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  animation: intro-mark var(--motion-slow) var(--motion-reveal) both;
+}
+.intro-line {
+  position: absolute;
+  left: 0;
+  top: calc(50% + 94px);
+  width: 100%;
+  height: 2px;
+  background: var(--brand-blue);
+  transform-origin: left;
+  animation: intro-line var(--motion-intro) var(--motion-reveal) both;
+}
+@keyframes intro-mark {
+  from { clip-path: inset(100% 0 0); opacity: 0; transform: scale(0.985); }
+  to { clip-path: inset(0); opacity: 1; transform: scale(1); }
+}
+@keyframes intro-line {
+  0% { transform: scaleX(0); }
+  40% { transform: scaleX(0.5); }
+  70% { transform: scaleX(1); }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+@keyframes intro-exit {
+  0%, 68% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.cursor-trail {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  pointer-events: none;
+  contain: strict;
+}
+.hero-title-line { display: inline-block; max-width: 100%; }
+.hero-photo { overflow: hidden; }
+.hero-photo picture { transition: transform var(--motion-slow) var(--motion-ease); }
+.site-header { transition: background-color var(--motion-base) var(--motion-ease); }
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: var(--brand-blue);
+  transform: scaleX(var(--reading-progress, 0));
+  transform-origin: left;
+  pointer-events: none;
+}
+html[data-scrolled="true"] .site-header { background: var(--bg-surface); }
+.desktop-nav a { position: relative; }
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 6px;
+  height: 1px;
+  background: var(--brand-blue-light);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-base) var(--motion-ease);
+}
+.desktop-nav a:focus-visible::after { transform: scaleX(1); }
+.button {
+  transition: background-color var(--motion-fast) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease),
+    translate var(--motion-base) var(--motion-reveal);
+}
+.button:active, .icon-button:active { transform: scale(0.985); }
+.text-link { transition: color var(--motion-fast) var(--motion-ease), text-underline-offset var(--motion-fast) var(--motion-ease); }
+
+/* Animate only these editorial moments. Everything is visible without motion JS. */
+.process-list li { position: relative; }
+.process-list li::before {
+  content: "";
+  position: absolute;
+  inset: -1px 0 auto;
+  height: 1px;
+  background: var(--brand-blue);
+  transform-origin: left;
+}
+.final-cta { position: relative; }
+.final-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--brand-blue-light);
+  transform-origin: left;
+}
+.foundation strong { position: relative; width: fit-content; }
+.foundation strong::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 2px;
+  background: var(--brand-blue);
+  transform-origin: left;
+}
+
+/* Height is animated only for the accordion, where spatial continuity is useful. */
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-question {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 23px 0;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.7;
+  background: transparent;
+  transition: color var(--motion-fast) var(--motion-ease);
+}
+.faq-question svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  transition: transform var(--motion-base) var(--motion-ease);
+}
+.faq-question[aria-expanded="true"] { color: var(--brand-blue-light); }
+.faq-question[aria-expanded="true"] svg { transform: rotate(45deg); }
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows var(--motion-base) var(--motion-ease), visibility var(--motion-base);
+}
+.faq-answer[data-open="true"] { grid-template-rows: 1fr; visibility: visible; }
+.faq-answer > div { overflow: hidden; min-height: 0; }
+.faq-answer p { padding: 0 35px 25px 0; color: var(--muted); font-size: 0.875rem; }
+
+/* Native dialog semantics, focus and top layer are preserved during transitions. */
+.lead-dialog, .menu-dialog {
+  opacity: 0;
+  transform: translateY(6px) scale(0.99);
+  transition: opacity var(--motion-fast) var(--motion-exit),
+    transform var(--motion-fast) var(--motion-exit),
+    display var(--motion-fast) allow-discrete,
+    overlay var(--motion-fast) allow-discrete;
+}
+.menu-dialog { transform: translateX(18px); }
+.lead-dialog[open], .menu-dialog[open] {
+  opacity: 1;
+  transform: none;
+  transition-duration: var(--motion-base);
+  transition-timing-function: var(--motion-ease);
+}
+dialog::backdrop {
+  background: rgb(0 0 0 / 0);
+  transition: background-color var(--motion-fast) var(--motion-ease),
+    display var(--motion-fast) allow-discrete, overlay var(--motion-fast) allow-discrete;
+}
+dialog[open]::backdrop { background: rgb(0 0 0 / 0.75); }
+@starting-style {
+  .lead-dialog[open] { opacity: 0; transform: translateY(6px) scale(0.99); }
+  .menu-dialog[open] { opacity: 0; transform: translateX(18px); }
+  dialog[open]::backdrop { background: rgb(0 0 0 / 0); }
+}
+
+@keyframes line-reveal { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+@keyframes title-reveal { from { clip-path: inset(100% 0 0); transform: translateY(6px); } to { clip-path: inset(0); transform: none; } }
+@keyframes quiet-entry { from { opacity: 0; } to { opacity: 1; } }
+@keyframes mark-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes menu-link-entry { from { opacity: 0; transform: translateX(8px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  html[data-motion-entry="intro"] { --entry-delay: var(--motion-intro); }
+  html[data-motion-entry] .header-inner { animation: quiet-entry var(--motion-base) var(--motion-ease) var(--entry-delay) backwards; }
+  html[data-motion-entry] .hero-location { animation: line-reveal var(--motion-base) var(--motion-reveal) calc(var(--entry-delay) + var(--motion-beat)) backwards; }
+  html[data-motion-entry] .hero-title-line { animation: title-reveal var(--motion-slow) var(--motion-reveal) calc(var(--entry-delay) + var(--motion-beat) * 2) backwards; }
+  html[data-motion-entry] .hero-title-line:last-child { animation-delay: calc(var(--entry-delay) + var(--motion-beat) * 3); }
+  html[data-motion-entry] .hero-description { animation: quiet-entry var(--motion-base) var(--motion-ease) calc(var(--entry-delay) + var(--motion-beat) * 4) backwards; }
+  html[data-motion-entry] .hero-actions { animation: quiet-entry var(--motion-base) var(--motion-ease) calc(var(--entry-delay) + var(--motion-beat) * 5) backwards; }
+  html[data-motion-entry] .hero-photo { animation: line-reveal var(--motion-slow) var(--motion-reveal) calc(var(--entry-delay) + var(--motion-beat) * 4) backwards; }
+  [data-reveal="image"][data-revealed] { animation: line-reveal var(--motion-slow) var(--motion-reveal) both; }
+  [data-reveal="step"][data-revealed]::before,
+  [data-reveal="finish"][data-revealed]::before,
+  [data-reveal="foundation"][data-revealed] strong::after { animation: mark-draw var(--motion-slow) var(--motion-reveal) both; }
+  .menu-dialog[open] nav a { animation: menu-link-entry var(--motion-base) var(--motion-ease) backwards; animation-delay: calc(var(--motion-beat) / 2); }
+  .menu-dialog[open] nav a:nth-child(2) { animation-delay: var(--motion-beat); }
+  .menu-dialog[open] nav a:nth-child(3) { animation-delay: calc(var(--motion-beat) * 1.5); }
+  .menu-dialog[open] nav a:nth-child(4) { animation-delay: calc(var(--motion-beat) * 2); }
+  .menu-dialog[open] nav a:nth-child(5) { animation-delay: calc(var(--motion-beat) * 2.5); }
+  .menu-dialog[open] nav a:nth-child(6) { animation-delay: calc(var(--motion-beat) * 3); }
+  .menu-dialog[open] nav a:nth-child(7) { animation-delay: calc(var(--motion-beat) * 3.5); }
+  .menu-dialog[open] .menu-bottom { animation: menu-link-entry var(--motion-base) var(--motion-ease) calc(var(--motion-beat) * 4) backwards; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .desktop-nav a:hover::after { transform: scaleX(1); }
+  .text-link:hover { text-underline-offset: 8px; }
+  .faq-question:hover { color: var(--brand-blue-light); }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-photo:hover picture { transform: scale(1.02); }
+}
+@media (max-width: 767px) {
+  .faq-question { font-size: 0.85rem; gap: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-intro, .cursor-trail, .site-header::after { display: none; }
+  [data-reveal], .hero-title-line { clip-path: none !important; }
+  .hero-photo picture, .button:active, .icon-button:active { transform: none; }
+  .button { translate: none !important; }
+  .lead-dialog, .menu-dialog { transform: none; }
+}

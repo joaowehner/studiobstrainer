@@ -101,8 +101,8 @@ export const businessData: BusinessConfig = {
     mapsEmbedQuery: "Rua+Vitório+Zeolla,+1965+-+Carandá+Bosque,+Campo+Grande+-+MS,+79032-360"
   },
   hours: {
-    weekdays: "05:00 às 20:00",
-    weekdaysDetail: "Segunda a Sexta-feira: das 05h às 20h",
+    weekdays: "05:00 às 21:00",
+    weekdaysDetail: "Segunda a Sexta-feira: das 05h às 21h",
     saturday: "Consulte atendimento com hora marcada",
     sunday: "Fechado",
     holidayNote: "Em feriados, consulte a programação especial via WhatsApp."
